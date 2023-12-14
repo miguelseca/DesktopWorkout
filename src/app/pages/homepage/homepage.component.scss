@@ -1,0 +1,78 @@
+
+$back-color: rgba(0, 0, 255, 0.1);
+
+$light: #fff;
+$spacing: 40px;
+$border: 2px;
+
+$hover-size: $spacing * 2 - $border * 2;
+$hover-margin: -38px;
+
+.container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   margin-bottom: 10px;
+}
+
+.controls {
+   display: flex;
+   gap: 10px;
+   padding: 10px;
+   background-color: $back-color;
+   backdrop-filter: blur(10px);
+}
+
+.card {
+   width: 290px;
+   height: 440px;
+   margin: 20px;
+   padding: 20px;
+   border-radius: 10px;
+   border: 10px solid $back-color;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   background-color: #fff;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.card img {
+   max-width: 100%;
+   width: 200px;
+   height: 200px;
+   border-radius: 8px;
+   // border: 1px solid #a70e0e;
+}
+
+.card h2 {
+   font-size: 1.5em;
+}
+
+.card p {
+   margin-top: 10px;
+   font-size: 1em;
+   color: #666;
+}
+
+.cardBack {
+   width: 300px;
+   height: 450px;
+   margin: 20px;
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   background: url('../../../assets/images/card-back.svg');
+}
+
+.bigButton {
+   border-radius:50%;
+   min-width:50px;
+   border:rgba(0, 0, 0, 0.1)
+}
+
+
+
+
+

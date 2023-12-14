@@ -1,34 +1,7 @@
-<div class="container">
-   <div class="card-container">
-      <div class="card" *ngIf="showCard">
-         <h4>{{ this.exercise.name }}</h4>
-         
-         <img [src]="'../../../assets/images/' + this.exercise.imageURL + '.bmp'" alt="Card Image" />
-         <p>{{ this.exercise.description }}</p>
-      </div>
+<div class="app-body">
+   <app-navbar></app-navbar>
 
-      <div class="cardBack" *ngIf="!showCard">
-         <p>Desktop Workout</p>
-      </div>
-   </div>
+   <router-outlet></router-outlet>
 
-   <div class="controls" *ngIf="!isTheAlarmeSet">
-      <select #soundSelect>
-         <option *ngFor="let option of options" [value]="option">{{ option }}</option>
-      </select>
-
-      <input #minutesSelect type="number" placeholder="Enter a number" />
-
-      <button (click)="setAlarm(soundSelect.value, minutesSelect.value)">
-         Set workout
-      </button>
-   </div>
-
-   <div class="display" *ngIf="isTheAlarmeSet">
-      <p>Next Workout in X minutes</p>
-
-      <button (click)="unsetAlarm()">Cancel workout</button>
-   </div>
+   <app-footer></app-footer>
 </div>
-<!-- 
-<router-outlet></router-outlet> -->

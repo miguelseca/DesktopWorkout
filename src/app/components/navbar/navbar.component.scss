@@ -1,0 +1,37 @@
+.header {
+   padding: 2px 15px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: rgba(0, 0, 255, 0.1);
+   backdrop-filter: blur(10px);
+}
+.logo {
+    display: flex;
+    gap: 10px;
+}
+
+.header img {
+    height: 50px;
+    width: 50px;
+    border-radius: 60px;
+    margin:auto;
+}
+
+.links {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+}
+
+.link {
+   margin-left: 15px;
+   cursor: pointer;
+   text-decoration: none;
+}
+
+.link:hover {
+
+    color: black;
+    text-decoration: underline;
+}
