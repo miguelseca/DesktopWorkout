@@ -1,4 +1,3 @@
-
 $back-color: rgba(0, 0, 255, 0.1);
 
 $light: #fff;
@@ -17,11 +16,19 @@ $hover-margin: -38px;
 }
 
 .controls {
+
    display: flex;
+   align-items: center;
+   justify-content: space-around;
    gap: 10px;
    padding: 10px;
    background-color: $back-color;
    backdrop-filter: blur(10px);
+}
+
+.cardButtons {
+   display: flex;
+   justify-content: space-around; 
 }
 
 .card {
@@ -43,7 +50,6 @@ $hover-margin: -38px;
    width: 200px;
    height: 200px;
    border-radius: 8px;
-   // border: 1px solid #a70e0e;
 }
 
 .card h2 {
@@ -57,22 +63,30 @@ $hover-margin: -38px;
 }
 
 .cardBack {
-   width: 300px;
-   height: 450px;
+   width: 290px;
+   height: 440px;
    margin: 20px;
    padding: 20px;
    border-radius: 10px;
+   border: 10px solid $back-color;
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
    background: url('../../../assets/images/card-back.svg');
 }
 
-.bigButton {
-   border-radius:50%;
-   min-width:50px;
-   border:rgba(0, 0, 0, 0.1)
+input:hover {
+   cursor: pointer;
 }
 
+.bigButton {
+   border-radius: 50%;   
+  
+   height: 50px;
+   width: 50px;
+   border: rgba(0, 0, 0, 0.1);
+}
 
-
-
-
+.bigButton:hover {
+   
+   background-color: bisque;
+   cursor: pointer;
+}

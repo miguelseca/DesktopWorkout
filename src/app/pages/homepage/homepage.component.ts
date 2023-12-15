@@ -44,8 +44,7 @@ export class HomepageComponent implements OnInit, AfterViewInit {
          this.minutesToNextWorkout = this.minutes
          this.workoutInterval = setInterval(() => {
             this.alarmAwake()
-         //}, this.minutes * 60000)
-         }, this.minutes )
+         }, this.minutes * 60000)
          this.calculateMinutesInterval = setInterval(() => {
             this.minutesToNextWorkout--
          }, 60000)
@@ -66,10 +65,9 @@ export class HomepageComponent implements OnInit, AfterViewInit {
    }
 
    alarmAwake() {
-      let audio: HTMLAudioElement = new Audio('../assets/sounds/mouse.mp3')
-      //audio.play()
-      //this.exercise = this.EXERCISES[Math.floor(Math.random() * this.EXERCISES.length)]
-      this.exercise = this.EXERCISES[0]
+      let audio: HTMLAudioElement = new Audio('../assets/sounds/1997.wav')
+      audio.play()
+      this.exercise = this.EXERCISES[Math.floor(Math.random() * this.EXERCISES.length)]
       this.showCard = true
    }
 }

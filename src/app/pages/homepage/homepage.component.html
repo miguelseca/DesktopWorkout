@@ -1,23 +1,21 @@
 <div class="container">
    <div class="card-container">
       <div class="card" *ngIf="showCard">
-         
-            <h4>{{ this.exercise.name }}</h4>
-            <img
-               [src]="'../../../assets/images/' + this.exercise.imageURL + '.bmp'"
-               alt="Card Image" />
-            <p>{{ this.exercise.description }}</p>
+         <h4>{{ this.exercise.name }}</h4>
+         <img
+            [src]="'../../../assets/images/' + this.exercise.imageURL + '.bmp'"
+            alt="Card Image" />
+         <p>{{ this.exercise.description }}</p>
 
+         <div class="cardButtons">
             <button class="bigButton" (click)="unsetAlarm()">Cancel</button>
-            <button class="bigButton" (click)="resetAlarm()">Done!</button>
+            <button class="bigButton" (click)="resetAlarm()">Done</button>
          </div>
-      
+      </div>
 
       <div class="cardBack" *ngIf="!showCard">
          <div class="controls" *ngIf="!isTheAlarmeSet">
-            <p *ngIf="!isTheAlarmeSet">
-               {{ this.minutes }}
-            </p>
+            <p *ngIf="!isTheAlarmeSet">{{ this.minutes }} minutes</p>
 
             <input
                #minutesSelect
@@ -31,7 +29,6 @@
                Start
             </button>
          </div>
-
          <div class="controls" *ngIf="isTheAlarmeSet">
             <p>Next Workout in {{ minutesToNextWorkout }} minutes</p>
 
