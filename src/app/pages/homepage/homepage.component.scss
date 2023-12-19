@@ -1,7 +1,11 @@
 
+
+
 $back-color: rgba(0, 0, 255, 0.1);
 
 $light: #fff;
+
+
 $spacing: 40px;
 $border: 2px;
 
@@ -69,10 +73,54 @@ $hover-margin: -38px;
 .bigButton {
    border-radius:50%;
    min-width:50px;
-   border:rgba(0, 0, 0, 0.1)
+   border:rgba(0, 0, 0, 0.1);
+   cursor: pointer;
+
 }
 
+.input {
+   cursor: pointer;
+}
 
+.lowerControls {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 300px;
+   gap: 10px;
+   padding: 10px;
 
+}
+.controlButton {
+  background-color: blue;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.controlButton:hover,
+.controlButton:focus {
+  background-color: lightblue;
+}
 
 

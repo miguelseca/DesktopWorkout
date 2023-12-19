@@ -1,17 +1,12 @@
 <div class="container">
    <div class="card-container">
       <div class="card" *ngIf="showCard">
-         
-            <h4>{{ this.exercise.name }}</h4>
-            <img
-               [src]="'../../../assets/images/' + this.exercise.imageURL + '.bmp'"
-               alt="Card Image" />
-            <p>{{ this.exercise.description }}</p>
-
-            <button class="bigButton" (click)="unsetAlarm()">Cancel</button>
-            <button class="bigButton" (click)="resetAlarm()">Done!</button>
-         </div>
-      
+         <h4>{{ this.exercise.name }}</h4>
+         <img
+            [src]="'../../../assets/images/' + this.exercise.imageURL + '.bmp'"
+            alt="Card Image" />
+         <p>{{ this.exercise.description }}</p>
+      </div>
 
       <div class="cardBack" *ngIf="!showCard">
          <div class="controls" *ngIf="!isTheAlarmeSet">
@@ -20,6 +15,7 @@
             </p>
 
             <input
+               class="input"
                #minutesSelect
                (mouseup)="changeMinutes(minutesSelect.value)"
                type="range"
@@ -38,5 +34,8 @@
             <button class="bigButton" (click)="unsetAlarm()">Cancel</button>
          </div>
       </div>
+   </div>
+   <div class="lowerControls" *ngIf="showCard">
+      <button class="controlButton" (click)="onDoneClick()">Done!</button>
    </div>
 </div>
