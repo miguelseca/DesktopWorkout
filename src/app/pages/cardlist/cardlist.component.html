@@ -1,1 +1,6 @@
-<p>cardlist works!</p>
+<div class="exercise-card-container">
+    <div *ngFor="let exercise of EXERCISES; index as index">
+      <app-small-card (exerciseSelected)="onExerciseSelected($event)" [exercise]="EXERCISES[index]"></app-small-card>
+    </div>
+  </div>
+  

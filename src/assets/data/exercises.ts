@@ -37,7 +37,7 @@ export const EXERCISES = [
       imageURL: 6,
       name: 'Chair Sit and Stand',
       description:
-         'tand in front of the chair with your legs shoulder-width apart. Squat down like you are sitting on the chair but without actually touching it. Maintain a proper position: back straight, knees above the feet, weight on the heels. Straighten your legs to go back to the starting position. Repeat the movement 10–15 times.',
+         'Stand in front of the chair with your legs shoulder-width apart. Squat down like you are sitting on the chair but without actually touching it. Maintain a proper position: back straight, knees above the feet, weight on the heels. Straighten your legs to go back to the starting position. Repeat the movement 10–15 times.',
    },
    {
       imageURL: 7,
@@ -67,7 +67,7 @@ export const EXERCISES = [
       imageURL: 11,
       name: 'Seated Hamstring Stretch',
       description:
-         'it in your chair with both feet on the ground, then extend one leg outward. Reach toward your toes. Hold stretch for 10–15 seconds while taking deep breaths. Repeat on the other leg for two sets',
+         'Sit in your chair with both feet on the ground, then extend one leg outward. Reach toward your toes. Hold stretch for 10–15 seconds while taking deep breaths. Repeat on the other leg for two sets',
    },
 
    {

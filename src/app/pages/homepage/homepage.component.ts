@@ -42,7 +42,7 @@ export class HomepageComponent implements OnInit {
          this.minutesToNextWorkout = this.minutes
          this.workoutInterval = setInterval(() => {
             this.alarmAwake()
-         }, this.minutes * 60000)
+         }, this.minutes * 10000)
          this.calculateMinutesInterval = setInterval(() => {
             this.minutesToNextWorkout--
          }, 60000)
