@@ -1,0 +1,17 @@
+<div class="exercise-card" (click)="onSelectDetails()">
+   
+    <div class="exercise-name">
+      <h4>{{ this.exercise.name }}</h4>
+   </div>
+   
+   <img
+      class="exercise-image"
+      [src]="'../../../assets/images/' + this.exercise.imageURL + '.bmp'"
+      alt="Card Image" />
+   
+   
+      <p>{{ this.exercise.description }}</p>
+
+
+
+</div>

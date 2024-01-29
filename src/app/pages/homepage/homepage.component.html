@@ -18,6 +18,7 @@
             <p *ngIf="!isTheAlarmeSet">{{ this.minutes }} minutes</p>
 
             <input
+               class="input"
                #minutesSelect
                (mouseup)="changeMinutes(minutesSelect.value)"
                type="range"
@@ -35,5 +36,8 @@
             <button class="bigButton" (click)="unsetAlarm()">Cancel</button>
          </div>
       </div>
+   </div>
+   <div class="lowerControls" *ngIf="showCard">
+      <button class="controlButton" (click)="onDoneClick()">Done!</button>
    </div>
 </div>

@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { Exercise } from 'src/models/Exercise'
 import { EXERCISES } from '../../../assets/data/exercises'
@@ -10,10 +10,8 @@ import { EXERCISES } from '../../../assets/data/exercises'
    templateUrl: './homepage.component.html',
    styleUrls: ['./homepage.component.scss'],
 })
-export class HomepageComponent implements OnInit, AfterViewInit {
-   cancelAlarm() {
-      throw new Error('Method not implemented.')
-   }
+export class HomepageComponent implements OnInit {
+ 
    title = 'Desktop Workout'
    defaultMinuteRange: number = 10
    minutes!: number
@@ -28,7 +26,7 @@ export class HomepageComponent implements OnInit, AfterViewInit {
    minutesToNextWorkout!: number
 
    public constructor() {}
-   ngAfterViewInit(): void {}
+
    ngOnInit(): void {
       this.minutes = this.defaultMinuteRange
       this.exercise = EXERCISES[this.exerciseNumber]
@@ -56,12 +54,17 @@ export class HomepageComponent implements OnInit, AfterViewInit {
       this.showCard = false
       clearInterval(this.workoutInterval)
       clearInterval(this.calculateMinutesInterval)
-      
+   }
+   
+   onDoneClick() {
+      this.showCard = false
+      this.setAlarm()     
    }
 
    resetAlarm() {
-      this.unsetAlarm();
-      this.setAlarm();
+      this.showCard = false 
+      this.unsetAlarm()
+      this.setAlarm()
    }
 
    alarmAwake() {
@@ -69,5 +72,8 @@ export class HomepageComponent implements OnInit, AfterViewInit {
       audio.play()
       this.exercise = this.EXERCISES[Math.floor(Math.random() * this.EXERCISES.length)]
       this.showCard = true
+      this.isTheAlarmeSet = false
+      clearInterval(this.workoutInterval)
+      clearInterval(this.calculateMinutesInterval)
    }
 }
