@@ -18,13 +18,10 @@ export class SmallCardComponent {
   exerciseSelected = new EventEmitter<Exercise>();
 
   constructor(private router: Router) {
-
   }
   
   onSelectDetails() {
     this.exerciseSelected.emit(this.exercise);
-    //this.router.navigate(['poke-detail', this.exercise.id]);
  }
-
 
 }

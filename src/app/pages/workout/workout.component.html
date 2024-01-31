@@ -1,0 +1,38 @@
+<div class="container">
+   <div class="card-container">
+      <div class="card" *ngIf="showCard">
+         <h4>{{ this.exercise.name }}</h4>
+         <img
+            [src]="'../../../assets/images/' + this.exercise.imageURL + '.bmp'"
+            alt="Card Image" />
+         <p>{{ this.exercise.description }}</p>
+
+         <div class="cardButtons">
+            <button class="bigButton" (click)="unsetAlarm()">Cancel</button>
+            <button class="bigButton" (click)="resetAlarm()">Done</button>
+         </div>
+      </div>
+
+      <div class="cardBack" *ngIf="!showCard">
+         <div class="controls" *ngIf="!isTheAlarmeSet">
+            <p *ngIf="!isTheAlarmeSet">{{ this.minutes }} minutes</p>
+
+            <mat-slider min="10" max="60" step="5" discrete [displayWith]="formatLabel">
+               <input matSliderThumb [(ngModel)]="minutes" />
+            </mat-slider>
+
+            <button class="bigButton" *ngIf="!isTheAlarmeSet" (click)="setAlarm()">
+               Start
+            </button>
+         </div>
+         <div class="controls" *ngIf="isTheAlarmeSet">
+            <p>Next Workout in {{ minutesToNextWorkout }} minutes</p>
+
+            <button class="bigButton" (click)="unsetAlarm()">Cancel</button>
+         </div>
+      </div>
+   </div>
+   <div class="lowerControls" *ngIf="showCard">
+      <button class="controlButton" (click)="onDoneClick()">Done!</button>
+   </div>
+</div>

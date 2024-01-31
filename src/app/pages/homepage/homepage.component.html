@@ -1,43 +1,10 @@
-<div class="container">
-   <div class="card-container">
-      <div class="card" *ngIf="showCard">
-         <h4>{{ this.exercise.name }}</h4>
-         <img
-            [src]="'../../../assets/images/' + this.exercise.imageURL + '.bmp'"
-            alt="Card Image" />
-         <p>{{ this.exercise.description }}</p>
-
-         <div class="cardButtons">
-            <button class="bigButton" (click)="unsetAlarm()">Cancel</button>
-            <button class="bigButton" (click)="resetAlarm()">Done</button>
-         </div>
-      </div>
-
-      <div class="cardBack" *ngIf="!showCard">
-         <div class="controls" *ngIf="!isTheAlarmeSet">
-            <p *ngIf="!isTheAlarmeSet">{{ this.minutes }} minutes</p>
-
-            <input
-               class="input"
-               #minutesSelect
-               (mouseup)="changeMinutes(minutesSelect.value)"
-               type="range"
-               value="{{ this.minutes }}"
-               min="1"
-               max="15" />
-
-            <button class="bigButton" *ngIf="!isTheAlarmeSet" (click)="setAlarm()">
-               Start
-            </button>
-         </div>
-         <div class="controls" *ngIf="isTheAlarmeSet">
-            <p>Next Workout in {{ minutesToNextWorkout }} minutes</p>
-
-            <button class="bigButton" (click)="unsetAlarm()">Cancel</button>
-         </div>
-      </div>
-   </div>
-   <div class="lowerControls" *ngIf="showCard">
-      <button class="controlButton" (click)="onDoneClick()">Done!</button>
-   </div>
+<div class="card">
+  <h2>Welcome to DeskFit</h2>
+  <p>Stay active while working from home with DeskFit!</p>
+  <ol>
+   
+    <li>Explore our <a class="link" routerLink="/cardlist">exercises</a> tab for a variety of desk-friendly workouts.</li>
+    <li>Need a break? Visit the  <a class="link" routerLink="/cardlist">workout</a> tab, set the timer, and get moving.</li>
+    <li>Prioritize your well-being and boost productivity today. Start now for a healthier you!</li>
+  </ol>
 </div>

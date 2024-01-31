@@ -7,15 +7,19 @@
    backdrop-filter: blur(10px);
 }
 .logo {
-    display: flex;
-    gap: 10px;
+   display: flex;
+   gap: 10px;
+}
+
+.logo:hover {
+   cursor: pointer;
 }
 
 .header img {
-    height: 50px;
-    width: 50px;
-    border-radius: 60px;
-    margin:auto;
+   height: 50px;
+   width: 50px;
+   border-radius: 60px;
+   margin: auto;
 }
 
 .links {
@@ -31,7 +35,6 @@
 }
 
 .link:hover {
-
-    color: black;
-    text-decoration: underline;
+   color: black;
+   text-decoration: underline;
 }
