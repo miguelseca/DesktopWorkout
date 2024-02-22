@@ -1,12 +1,5 @@
 $back-color: rgba(0, 0, 255, 0.1);
-
 $light: #fff;
-
-$spacing: 40px;
-$border: 2px;
-
-$hover-size: $spacing * 2 - $border * 2;
-$hover-margin: -38px;
 
 .container {
    display: flex;
@@ -16,7 +9,36 @@ $hover-margin: -38px;
    margin-bottom: 10px;
 }
 
-.controls {
+.configControls {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   flex-direction: column;
+   background-color: $back-color;
+   backdrop-filter: blur(10px);
+}
+
+.timeConfig {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   gap: 10px;
+   padding: 10px;
+}
+
+.soundConfig {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   gap: 10px;
+   padding: 10px;
+}
+
+.mat-form-field {
+   margin-bottom: -1.25em;
+}
+
+.displayTime {
    display: flex;
    align-items: center;
    justify-content: space-around;
@@ -79,7 +101,6 @@ input:hover {
 
 .bigButton {
    border-radius: 50%;
-
    height: 50px;
    width: 50px;
    border: rgba(0, 0, 0, 0.1);

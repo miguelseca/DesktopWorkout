@@ -14,18 +14,36 @@
       </div>
 
       <div class="cardBack" *ngIf="!showCard">
-         <div class="controls" *ngIf="!isTheAlarmeSet">
-            <p *ngIf="!isTheAlarmeSet">{{ this.minutes }} minutes</p>
+         <div class="configControls" *ngIf="!isTheAlarmeSet">
+            <div class="timeConfig">
+               <p *ngIf="!isTheAlarmeSet">{{ this.minutes }} minutes</p>
 
-            <mat-slider min="10" max="60" step="5" discrete [displayWith]="formatLabel">
-               <input matSliderThumb [(ngModel)]="minutes" />
-            </mat-slider>
+               <mat-slider min="2" max="60" step="5" discrete [displayWith]="formatLabel">
+                  <input matSliderThumb [(ngModel)]="minutes" />
+               </mat-slider>
 
-            <button class="bigButton" *ngIf="!isTheAlarmeSet" (click)="setAlarm()">
-               Start
-            </button>
+               <button class="bigButton" *ngIf="!isTheAlarmeSet" (click)="setAlarm()">
+                  Start
+               </button>
+            </div>
+
+            <div class="soundConfig">
+               <mat-form-field subscriptSizing="dynamic" required>
+                  <mat-label>Alarm Sound</mat-label>
+                  <mat-select [(ngModel)]="sound">
+                     <mat-option *ngFor="let sound of sounds" [value]="sound">{{
+                        sound
+                     }}</mat-option>
+                  </mat-select>
+               </mat-form-field>
+
+               <button class="bigButton" *ngIf="!isTheAlarmeSet" (click)="soundTest()">
+                  Sound Test
+               </button>
+            </div>
          </div>
-         <div class="controls" *ngIf="isTheAlarmeSet">
+
+         <div class="displayTime" *ngIf="isTheAlarmeSet">
             <p>Next Workout in {{ minutesToNextWorkout }} minutes</p>
 
             <button class="bigButton" (click)="unsetAlarm()">Cancel</button>

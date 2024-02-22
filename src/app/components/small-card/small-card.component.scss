@@ -7,6 +7,7 @@
    background-color: rgb(163, 194, 204, 50);
    width: 220px;
    height: 330px;
+   transition: transform 0.7s;
 }
 
 .exercise-image {
@@ -35,6 +36,7 @@ p {
    background-color: rgb(106, 140, 151);
    box-shadow: 0 6px 10px rgba(209, 16, 16, 0.2);
    cursor: pointer;
+   transform: scale(1.1);
 }
 .exercise-card:hover .exercise-image {
     filter: brightness(80%)

@@ -2,7 +2,7 @@ import { Component } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { SmallCardComponent } from 'src/app/components/small-card/small-card.component'
 import { EXERCISES } from '../../../assets/data/exercises'
-import { Exercise } from 'src/models/Exercise'
+import { Exercise } from 'src/app/models/Exercise'
 
 @Component({
    selector: 'app-cardlist',

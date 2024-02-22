@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Exercise } from 'src/models/Exercise';
+import { Exercise } from 'src/app/models/Exercise';
 import { Router } from '@angular/router';
 
 @Component({
