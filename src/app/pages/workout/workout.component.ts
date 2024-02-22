@@ -5,11 +5,12 @@ import { EXERCISES } from '../../../assets/data/exercises'
 import { MatSliderModule } from '@angular/material/slider'
 import { MatSelectModule } from '@angular/material/select'
 import { FormsModule } from '@angular/forms'
+import { PluralSingularPipe } from 'src/app/pipes/plural-singular.pipe'
 
 @Component({
    selector: 'app-workout',
    standalone: true,
-   imports: [CommonModule, MatSliderModule, MatSelectModule, FormsModule],
+   imports: [CommonModule, MatSliderModule, MatSelectModule, FormsModule, PluralSingularPipe],
    templateUrl: './workout.component.html',
    styleUrls: ['./workout.component.scss'],
 })

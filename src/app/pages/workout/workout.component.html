@@ -44,13 +44,13 @@
          </div>
 
          <div class="displayTime" *ngIf="isTheAlarmeSet">
-            <p>Next Workout in {{ minutesToNextWorkout }} minutes</p>
+            <p>
+               Next Workout in
+               {{ minutesToNextWorkout | pluralSingular: 'minute' : 'minutes' }}
+            </p>
 
             <button class="bigButton" (click)="unsetAlarm()">Cancel</button>
          </div>
       </div>
-   </div>
-   <div class="lowerControls" *ngIf="showCard">
-      <button class="controlButton" (click)="onDoneClick()">Done!</button>
    </div>
 </div>
