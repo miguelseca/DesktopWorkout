@@ -30,13 +30,16 @@
 
 .social-icon img:hover{
   animation: reduceSize .5s forwards;
+  
 }
 
 @keyframes reduceSize {
   from {
     transform: scale(1);
+    transform: scaleX(1);
   }
   to {
-    transform: scale(1.3);
+    transform: scale(1.2);
+    transform: scaleX(1.3);
   }
 }
